@@ -1,6 +1,7 @@
 package io.proj3ct.KotovichBot.config;
 
-import io.proj3ct.service.TelegramBot;
+
+import io.proj3ct.KotovichBot.service.TelegramBot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
@@ -23,7 +24,5 @@ public class BotInitializer {
         } catch (TelegramApiException e) {
 
         }
-
     }
-
 }

@@ -1,4 +1,4 @@
-package io.proj3ct.service;
+package io.proj3ct.KotovichBot.service;
 
 import io.proj3ct.KotovichBot.config.BotConfig;
 import org.springframework.stereotype.Component;
@@ -37,6 +37,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             switch (messageText){
                 case "/start":
                     startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
+                    break;
                 default: sendMessage(chatId, "Команда введена неверно или неподдерживается");
             }
         }
